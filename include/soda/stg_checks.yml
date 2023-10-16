@@ -1,0 +1,9 @@
+checks for raw_customers:
+  # check that all entries in customer_id are unique
+  - duplicate_count(id) = 0
+  # check that first_name has no missing values
+  - missing_count(first_name) = 0
+
+checks for raw_orders:
+    # check that all entries in order_date are missing
+  - missing_count(order_date) = 0
